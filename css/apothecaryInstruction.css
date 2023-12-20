@@ -1,0 +1,118 @@
+
+body {
+    background: #f5f5f5;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+
+/* 医师 */
+
+#doctor>div {
+    padding: 0.2rem 0.2rem 0.22rem 0.3rem;
+    margin-bottom: 0.2rem;
+    background: #fff;
+}
+
+#doctor>div:hover {
+    box-shadow: 0 0.04rem 0.08rem #ccc;
+}
+
+/* 上边信息部分 */
+#doctor .information>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#doctor .information>div img {
+    width: 1.12rem;
+    height: 1.12rem;
+    border-radius: 0.56rem;
+}
+
+#doctor .information .title div {
+    display: flex;
+    align-items: center;
+}
+
+#doctor .information .title .top {
+    justify-content: space-between;
+    margin-bottom: 0.24rem;
+}
+
+#doctor .information .top>div span:nth-child(1) {
+    font-size: 0.26rem;
+    color: #333333;
+    margin-right: 0.08rem;
+}
+
+#doctor .information .top>div span:nth-child(2) {
+    font-size: 0.3rem;
+    color: #ffa35c;
+}
+
+#doctor .information .top>span {
+    font-size: 0.24rem;
+    color: #999999;
+}
+
+#doctor .information .bottom {
+    font-size: 0.24rem;
+    color: #202020;
+}
+
+#doctor .information .bottom>span:nth-child(1) {
+    margin-right: 0.16rem;
+}
+
+#doctor .information .bottom>span:nth-child(2) {
+    margin-right: 0.36rem;
+}
+
+#doctor .information .bottom>span:nth-child(3) {
+    margin-right: 0.16rem;
+}
+
+#doctor .information>div>span {
+    font-size: 0.3rem;
+    color: #a2a1a2;
+    align-self: flex-end;
+}
+
+#doctor .information>p {
+    width: 5.6rem;
+    font-size: 0.22rem;
+    color: #57bbce;
+    line-height: 0.52rem;
+    padding-top: 0.17rem;
+    padding-left: 0.14rem;
+    padding-bottom: 0.1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow:hidden;
+}
+
+/* 下边的功能选择部分 */
+#doctor .function {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.24rem;
+    border-top: 0.02rem solid #e0e0e0;
+}
+
+#doctor .function>a {
+    display: block;
+    width: 2.02rem;
+    border: 0.03rem solid #e94544;
+    font-size: 0.26rem;
+    color: #e94544;
+    text-align: center;
+    line-height: 0.62rem;
+    border-radius: 0.1rem;
+}

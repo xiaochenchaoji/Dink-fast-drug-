@@ -1,0 +1,11 @@
+.main #cart-empty {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    color: #bada55;
+    /* 浅灰色 */
+    font-size: 12px;
+    /* 调整字体大小 */
+}

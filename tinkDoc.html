@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tinkDoc</title>
+    <!-- 引入重置样式 reset.css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- 引入字体图标样式 iconfont.css-->
+    <link rel="stylesheet" href="fonts/iconfont.css" />
+    <!-- 引入公共样式 common,css -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 引入叮当快医页面样式 tinkDoc.css -->
+    <link rel="stylesheet" href="css/tinkDoc.css" />
+    <!-- 引入移动端页面自适应的js rem.js -->
+    <script src="js/rem.js"></script>
+  </head>
+
+  <body>
+    <!-- 返回标题 -->
+    <div id="backTitle">
+      <a class="iconfont icon-xianghou" href="index.html"></a>
+      <h1>药师指导</h1>
+    </div>
+    <div class="main">
+      <!-- 广告1 -->
+      <a id="ad1" href="#">
+        <img src="images/doc_img01.jpg" alt="" />
+      </a>
+      <!-- 医生服务 -->
+      <div id="serverce">
+        <h1>医生服务</h1>
+        <div>
+          <a href="#" id="link1"><img src="images/doc_img02.jpg" alt="" /></a>
+          <div>
+            <a href="#" id="link2"><img src="images/doc_img03.jpg" alt="" /></a>
+            <a href="#" id="link3"><img src="images/doc_img04.jpg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+      <!-- 广告2 -->
+      <a id="ad2" href="#">
+        <img src="images/doc_img05.jpg" alt="" />
+      </a>
+    </div>
+    <!-- 导航 -->
+    <div id="nav">
+      <a href="index.html" class="checked">
+        <span class="iconfont icon-shouye"></span>
+        <div>首页</div>
+      </a>
+      <a href="#">
+        <span class="iconfont icon-jilu"></span>
+        <div>就诊记录</div>
+      </a>
+    </div>
+    <script>
+      var link = document.getElementById("link1");
+
+      // 为链接元素添加点击事件监听器
+      link.addEventListener("click", function (e) {
+        // 阻止链接的默认行为
+        e.preventDefault();
+
+        // 弹出警告框
+        alert("目前排队人数过多，您前面还有2位！");
+      });
+    </script>
+  </body>
+</html>

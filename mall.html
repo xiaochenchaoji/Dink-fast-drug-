@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mall</title>
+    <!-- 引入重置样式 reset.css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- 引入字体图标样式 iconfont.css-->
+    <link rel="stylesheet" href="fonts/iconfont.css" />
+    <!-- 引入公共样式 common,css -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 引入商城样式 mall.css -->
+    <link rel="stylesheet" href="css/mall.css" />
+    <!-- 引入移动端页面自适应的js rem.js -->
+    <script src="js/rem.js"></script>
+    <script src="js/jsonmall.js"></script>
+    <script src="js/mall.js"></script>
+    <style>
+      p {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      p.with-margin-left {
+        margin-left: 20px;
+      }
+
+      p.last {
+        margin-left: 20px;
+        margin-bottom: 0px;
+      }
+      p,
+      ul,
+      h4 {
+        padding: 0;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .tw li {
+        width: 350px;
+        height: 200px;
+        float: left;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+      }
+      .tw li img {
+        width: 350px;
+        height: 200px;
+      }
+      .text {
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all 1s;
+        background: rgba(0, 51, 102, 0.5);
+        color: #fff;
+        font-size: 14px;
+      }
+      .text h4 {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+      }
+      .text p {
+        line-height: 20px;
+        text-indent: 2em;
+        padding: 3px 2px 4px;
+      }
+      .tw li:hover .text {
+        margin-bottom: 0px;
+        height: 20px;
+        background: #f8f8f8;
+      }
+      .container {
+        display: flex;
+        height: 375px;
+        height: 30px;
+        justify-content: center;
+        align-items: flex-start;
+        /* height: 100vh;  */
+        font-size: 26px;
+        color: #5f5d5d;
+      }
+      .recommand {
+        margin: 20px; /* 为了使推荐文字与容器边缘有一些间距 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- top -->
+    <div id="top">
+      <form class="search" action="#" method="POST">
+        <span class="iconfont icon-sousuo"></span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="搜索药品、症状、品牌"
+          name="search"
+        />
+        <span class="iconfont icon-saoma"></span>
+      </form>
+      <form action="search-font">
+        <a href="#"
+          ><p style="text-align: center; margin-bottom: 1px">益生菌</p></a
+        >
+        <a href="#"
+          ><p class="with-margin-left" style="text-align: center">甲流</p></a
+        >
+        <a href="#"
+          ><p class="with-margin-left" style="text-align: center">
+            猫狗用药
+          </p></a
+        >
+        <a href="#"
+          ><p class="with-margin-left" style="text-align: center">壮阳</p></a
+        >
+        <a href="#"
+          ><p class="with-margin-left" style="text-align: center">
+            血压手表
+          </p></a
+        >
+        <a href="#"><p class="last" style="text-align: center">肠胃</p></a>
+      </form>
+    </div>
+    <div class="main">
+      <!-- 轮播 -->
+      <div id="banner">
+        <div class="content">
+          <a id="banner01" href="#"><img src="images/banner01.jpg" alt="" /></a>
+          <a id="banner02" href="#"><img src="images/banner02.jpg" alt="" /></a>
+          <a id="banner03" href="#"><img src="images/banner03.jpg" alt="" /></a>
+          <a id="banner04" href="#"><img src="images/banner04.jpg" alt="" /></a>
+          <a id="banner05" href="#"><img src="images/banner05.jpg" alt="" /></a>
+        </div>
+        <div class="controls">
+          <a href="#banner01"></a>
+          <a href="#banner02"></a>
+          <a href="#banner03"></a>
+          <a href="#banner04"></a>
+          <a href="#banner05"></a>
+          <a class="checked" href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+      <!-- 项目 -->
+      <div id="project">
+        <a href="#">
+          <img src="images/mall_icon01.jpg" alt="" />
+          <div>热门活动</div>
+        </a>
+        <a href="#">
+          <img src="images/mall_icon02.jpg" alt="" />
+          <div>快速找药</div>
+        </a>
+        <a href="apothecaryInstruction.html">
+          <img src="images/mall_icon03.jpg" alt="" />
+          <div>药师指导</div>
+        </a>
+        <a href="#">
+          <img src="images/mall_icon04.jpg" alt="" />
+          <div>会员福利</div>
+        </a>
+        <a href="#">
+          <img src="images/mall_icon05.jpg" alt="" />
+          <div>海外药房</div>
+        </a>
+      </div>
+      <!-- 广告 -->
+      <a href="#" id="ad">
+        <img src="images/ad02.jpg" alt="" />
+      </a>
+
+      <!-- 分类 -->
+      <div id="classification">
+        <div>
+          <div class="content">
+            <a href="#">
+              <img src="images/mall_img01.jpg" alt="" />
+              <div>男科用药</div>
+              <div>硬对自如</div>
+            </a>
+            <a href="#">
+              <img src="images/mall_img02.jpg" alt="" />
+              <div>妇科用药</div>
+              <div>女人如花</div>
+            </a>
+            <a href="#">
+              <img src="images/mall_img03.jpg" alt="" />
+              <div>性福生活</div>
+              <div>有情有趣</div>
+            </a>
+            <a href="#">
+              <img src="images/mall_img04.jpg" alt="" />
+              <div>皮肤用药</div>
+              <div>杀菌止痒</div>
+            </a>
+          </div>
+          <div class="content">
+            <a href="#">
+              <img src="images/mall_img05.jpg" alt="" />
+              <div>养生花茶</div>
+              <div>美容养颜</div>
+            </a>
+            <a href="#">
+              <img src="images/mall_img06.jpg" alt="" />
+              <div>营养保健</div>
+              <div>增强免疫</div>
+            </a>
+            <a href="#">
+              <img src="images/mall_img07.jpg" alt="" />
+              <div>个人护理</div>
+              <div>美丽肌肤</div>
+            </a>
+            <a href="#">
+              <img src="images/mall_img08.jpg" alt="" />
+              <div>儿童用药</div>
+              <div>健康成长</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- 提示链接 -->
+        <a id="hint" href="#">
+          <div>叮当币上线了，消费1元获得1叮当币，可兑换优惠券，详戳</div>
+          <span class="iconfont icon-xianghou"></span>
+        </a>
+      </div>
+      <div class="container">
+        <div>为你推荐</div>
+      </div>
+      <div class="tw">
+        <ul id="list"></ul>
+      </div>
+    </div>
+
+    <!-- 导航 -->
+    <div id="nav">
+      <a href="index.html">
+        <span class="iconfont icon-shouye"></span>
+        <div>叮当快药</div>
+      </a>
+      <a href="mall.html" class="checked">
+        <span class="iconfont icon-yaowan"></span>
+        <div>叮当商城</div>
+      </a>
+      <a href="list.html">
+        <span class="iconfont icon-gouwuchekong"></span>
+        <div>清单列表</div>
+      </a>
+      <a href="my.html">
+        <span class="iconfont icon-sself"></span>
+        <div>我的</div>
+      </a>
+    </div>
+  </body>
+  <script>
+    var banner = document.getElementById("banner");
+    var content = banner.querySelector(".content");
+    var controls = banner.querySelector(".controls");
+    var links = content.getElementsByTagName("a");
+    var dots = controls.getElementsByTagName("a");
+    var currentIndex = 0;
+    // 当前显示的轮播图索引
+    var intervalId = setInterval(function () {
+      // 设置定时器，自动切换轮播图
+      currentIndex++;
+      if (currentIndex >= links.length) {
+        // 如果当前索引大于等于轮播图数量，重置为0
+        currentIndex = 0;
+      }
+      showBanner(currentIndex); // 显示对应索引的轮播图
+    }, 2000); // 每3秒钟切换一次轮播图
+    function showBanner(index) {
+      // 显示指定索引的轮播图，并更新控制点状态
+      for (var i = 0; i < links.length; i++) {
+        // 隐藏所有轮播图和控制点，并移除控制点的选中状态
+        links[i].style.display = "none";
+        dots[i].className = "";
+      }
+      links[index].style.display = "block";
+      // 显示指定索引的轮播图，并添加控制点的选中状态，这里通过修改样式来实现轮播图的切换和控制点的选中状态更新。你可以根据需要进行更多的样式和交互效果的调整。另外，记得替换掉你的图片链接。
+      dots[index].className = "checked";
+    }
+    controls.addEventListener("click", function (e) {
+      // 点击控制点切换轮播图
+      var target = e.target;
+      if (target.tagName.toLowerCase() === "a") {
+        e.preventDefault();
+        // 阻止默认行为，即阻止链接跳转
+        currentIndex = Array.prototype.indexOf.call(dots, target);
+        // 获取点击的控制点的索引
+        showBanner(currentIndex);
+      }
+    });
+    // 定义要循环播放的文本列表
+    var searchTexts = [
+      "搜索药品、症状、品牌",
+      "益生菌",
+      "甲流",
+      "猫狗用药",
+      "壮阳",
+      "肠胃",
+    ];
+    var currentIndex = 0;
+
+    // 为搜索框设置无限循环的文本
+    function setInfiniteSearchText() {
+      var searchInput = document.getElementById("searchInput");
+      searchInput.value = searchTexts[currentIndex];
+      currentIndex = (currentIndex + 1) % searchTexts.length; // 循环到下一个文本
+    }
+
+    // 每2秒钟更新一次搜索框的文本
+    setInterval(setInfiniteSearchText, 1000);
+
+    var json = [
+      {
+        pic: "./images/mall-tw01.jpg",
+        h4: "OTC京都念慈庵蜜炼川贝枇杷膏",
+        p: "润肺化痰，止咳平喘，调心降火。用于伤风咳嗽，痰多气喘。",
+      },
+      {
+        pic: "./images/mall-tw02.jpg",
+        h4: "[同仁堂]甘草片",
+        p: "补脾益气，清热解毒，祛痰止咳。用于脾胃虚弱。",
+      },
+      {
+        pic: "./images/mall-tw03.jpg",
+        h4: "OTC[济民可信]复方鲜竹沥液",
+        p: "清热化痰，止咳。用于痰热咳嗽，痰黄粘稠。",
+      },
+      {
+        pic: "./images/mall-tw04.jpg",
+        h4: "OTC[小葵花]小儿止咳糖浆",
+        p: "祛痰，镇咳。用于小儿感冒引起的咳嗽。",
+      },
+    ];
+    var ul = document.querySelector(".tw").getElementsByTagName("ul")[0];
+
+    function addRow(row) {
+      var hang =
+        "<img src='" +
+        row.pic +
+        "'><div class='text'><h4>" +
+        row.h4 +
+        "</h4><p>" +
+        row.p +
+        "</p></div>";
+      var ne = document.createElement("li");
+      ne.innerHTML = hang;
+      ul.appendChild(ne);
+    }
+    for (let i = 0; i < json.length; i++) {
+      addRow(json[i]);
+    }
+    // 延迟加载JSON数据以避免阻塞页面渲染
+    document.addEventListener("DOMContentLoaded", (event) => {
+      // 使用fetch从json文件加载数据
+      fetch("data.json")
+        .then((response) => response.json()) // 将响应解析为JSON
+        .then((data) => {
+          var ul = document.querySelector("#list"); // 获取ul元素
+          function addRow(row) {
+            var hang =
+              "<img src='" +
+              row.pic +
+              "'><div class='text'><h4>" +
+              row.h4 +
+              "</h4><p>" +
+              row.p +
+              "</p></div>";
+            var ne = document.createElement("li");
+            ne.innerHTML = hang;
+            ul.appendChild(ne);
+          }
+          for (let i = 0; i < data.length; i++) {
+            // 使用从JSON文件中加载的数据创建新行
+            addRow(data[i]);
+          }
+        })
+        .catch((error) => console.error("Error:", error)); // 错误处理
+    });
+  </script>
+</html>

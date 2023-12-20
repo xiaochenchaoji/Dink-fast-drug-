@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <!-- 引入重置样式 reset.css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- 引入字体图标样式 iconfont.css-->
+    <link rel="stylesheet" href="fonts/iconfont.css" />
+    <!-- 引入公共样式 common,css -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 引入首页样式 index.css -->
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- 引入移动端页面自适应的js rem.js -->
+    <script src="js/rem.js"></script>
+    <!-- 引入index.js轮播图样式 -->
+    <script src="js/index.js"></script>
+    <script src="js/json.js"></script>
+
+    <style>
+      p {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      p.with-margin-left {
+        margin-left: 20px;
+      }
+
+      p.last {
+        margin-left: 20px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <!-- top -->
+      <div id="top">
+        <div class="addr">
+          <a href="#">
+            <span class="iconfont icon-Frame1-copy"></span>
+            <div>送至：大连东软信息学院小陈33号</div>
+            <span class="iconfont icon-xianghou"></span>
+          </a>
+          <span class="iconfont icon-xiaoxi"></span>
+        </div>
+        <form class="search" action="#" method="POST">
+          <span class="iconfont icon-sousuo"></span>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="搜索药品、症状、品牌"
+            name="search"
+          />
+          <span class="iconfont icon-saoma"></span>
+        </form>
+        <form class="search-font" action="#">
+          <a href="#"
+            ><p style="text-align: center; margin-bottom: 5px">益生菌</p></a
+          >
+          <a href="#"
+            ><p class="with-margin-left" style="text-align: center">甲流</p></a
+          >
+          <a href="#"
+            ><p class="with-margin-left" style="text-align: center">
+              猫狗用药
+            </p></a
+          >
+          <a href="#"
+            ><p class="with-margin-left" style="text-align: center">壮阳</p></a
+          >
+          <a href="#"
+            ><p class="with-margin-left" style="text-align: center">
+              血压手表
+            </p></a
+          >
+          <a href="#"><p class="last" style="text-align: center">肠胃</p></a>
+        </form>
+      </div>
+      <!-- 轮播 -->
+      <div id="banner">
+        <div class="content">
+          <a id="banner01" href="#"><img src="images/banner01.jpg" alt="" /></a>
+          <a id="banner02" href="#"><img src="images/banner02.jpg" alt="" /></a>
+          <a id="banner03" href="#"><img src="images/banner03.jpg" alt="" /></a>
+          <a id="banner04" href="#"><img src="images/banner04.jpg" alt="" /></a>
+          <a id="banner05" href="#"><img src="images/banner05.jpg" alt="" /></a>
+        </div>
+        <div class="controls">
+          <a href="#banner01"></a>
+          <a href="#banner02"></a>
+          <a href="#banner03"></a>
+          <a href="#banner04"></a>
+          <a href="#banner05"></a>
+          <a class="checked" href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+      <!-- 项目 -->
+      <div id="project" class="indexProject"></div>
+      <!-- 活动 -->
+      <div id="active">
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
+      <!-- 公告 -->
+      <div id="notice">
+        <img src="images/notice01.jpg" alt="" />
+        <span>提供24小时快速配送服务。</span>
+      </div>
+      <!-- 快送 -->
+      <div id="fast">
+        <div class="content">
+          <div>
+            <span class="iconfont icon-zhengque"></span>
+            <span>28分钟快送</span>
+          </div>
+          <div>
+            <span class="iconfont icon-zhengque"></span>
+            <span>满28免运费</span>
+          </div>
+          <div>
+            <span class="iconfont icon-zhengque"></span>
+            <span>24小时服务</span>
+          </div>
+        </div>
+      </div>
+      <!-- 快送产品 -->
+      <div id="fastProduction">
+        <a href="#">
+          <div class="feature">28分钟快送</div>
+          <div class="content">
+            <div>
+              <h1>医院常开药品</h1>
+              <div>部分第二件8折</div>
+            </div>
+            <img src="images/fastpro01.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <div class="feature">28分钟快送</div>
+          <div class="content">
+            <div>
+              <h1>医院常开药品</h1>
+              <div>部分第二件8折</div>
+            </div>
+            <img src="images/fastpro01.jpg" alt="" />
+          </div>
+        </a>
+      </div>
+      <!-- 分类 -->
+      <div id="classification">
+        <div>
+          <div class="content">
+            <a href="#">
+              <img src="images/icon01.jpg" alt="" />
+              <div>感冒发烧</div>
+            </a>
+            <a href="#">
+              <img src="images/icon02.jpg" alt="" />
+              <div>清热解毒</div>
+            </a>
+            <a href="#">
+              <img src="images/icon03.jpg" alt="" />
+              <div>咳嗽用药</div>
+            </a>
+            <a href="#">
+              <img src="images/icon04.jpg" alt="" />
+              <div>皮肤用药</div>
+            </a>
+          </div>
+          <div class="content">
+            <a href="#">
+              <img src="images/icon05.jpg" alt="" />
+              <div>肠胃用药</div>
+            </a>
+            <a href="#">
+              <img src="images/icon06.jpg" alt="" />
+              <div>性福生活</div>
+            </a>
+            <a href="#">
+              <img src="images/icon07.jpg" alt="" />
+              <div>滋补调养</div>
+            </a>
+            <a href="#">
+              <img src="images/icon08.jpg" alt="" />
+              <div>功能保健</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 产品 -->
+      <div id="product">
+        <div class="shopProject"></div>
+      </div>
+      <!-- 广告 -->
+      <a id="ad" href="#">
+        <img src="images/ad01.jpg" alt="" />
+      </a>
+    </div>
+    <!-- 导航 -->
+    <div id="nav">
+      <a href="index.html" class="checked">
+        <span class="iconfont icon-shouye"></span>
+        <div>叮当快药</div>
+      </a>
+      <a href="mall.html">
+        <span class="iconfont icon-yaowan"></span>
+        <div>叮当商城</div>
+      </a>
+      <a href="list.html">
+        <span class="iconfont icon-gouwuchekong"></span>
+        <div>清单列表</div>
+      </a>
+      <a href="./my.html">
+        <span class="iconfont icon-sself"></span>
+        <div>我的</div>
+      </a>
+    </div>
+    <!-- 悬浮广告 -->
+    <a id="red" href="#">
+      <img src="images/redbag.jpg" alt="" />
+    </a>
+  </body>
+  <script>
+    var banner = document.getElementById("banner");
+    var content = banner.querySelector(".content");
+    var controls = banner.querySelector(".controls");
+    var links = content.getElementsByTagName("a");
+    var dots = controls.getElementsByTagName("a");
+    var currentIndex = 0;
+    // 当前显示的轮播图索引
+    var intervalId = setInterval(function () {
+      // 设置定时器，自动切换轮播图
+      currentIndex++;
+      if (currentIndex >= links.length) {
+        // 如果当前索引大于等于轮播图数量，重置为0
+        currentIndex = 0;
+      }
+      showBanner(currentIndex); // 显示对应索引的轮播图
+    }, 2000); // 每3秒钟切换一次轮播图
+    function showBanner(index) {
+      // 显示指定索引的轮播图，并更新控制点状态
+      for (var i = 0; i < links.length; i++) {
+        // 隐藏所有轮播图和控制点，并移除控制点的选中状态
+        links[i].style.display = "none";
+        dots[i].className = "";
+      }
+      links[index].style.display = "block";
+      // 显示指定索引的轮播图，并添加控制点的选中状态，这里通过修改样式来实现轮播图的切换和控制点的选中状态更新。你可以根据需要进行更多的样式和交互效果的调整。另外，记得替换掉你的图片链接。
+      dots[index].className = "checked";
+    }
+    controls.addEventListener("click", function (e) {
+      // 点击控制点切换轮播图
+      var target = e.target;
+      if (target.tagName.toLowerCase() === "a") {
+        e.preventDefault();
+        // 阻止默认行为，即阻止链接跳转
+        currentIndex = Array.prototype.indexOf.call(dots, target);
+        // 获取点击的控制点的索引
+        showBanner(currentIndex);
+      }
+    });
+
+    // 定义要循环播放的文本列表
+    var searchTexts = [
+      "搜索药品、症状、品牌",
+      "益生菌",
+      "甲流",
+      "猫狗用药",
+      "壮阳",
+      "肠胃",
+    ];
+    var currentIndex = 0;
+
+    // 为搜索框设置无限循环的文本
+    function setInfiniteSearchText() {
+      var searchInput = document.getElementById("searchInput");
+      searchInput.value = searchTexts[currentIndex];
+      currentIndex = (currentIndex + 1) % searchTexts.length; // 循环到下一个文本
+    }
+
+    // 每2秒钟更新一次搜索框的文本
+    setInterval(setInfiniteSearchText, 1000);
+  </script>
+</html>

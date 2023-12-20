@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21001010733陈显钦</title>
+    <style>
+      p {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      p.with-margin-left {
+        margin-left: 20px;
+      }
+
+      p.last {
+        margin-left: 20px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form class="search" action="#" method="POST">
+        <span class="iconfont icon-sousuo"></span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="搜索药品、症状、品牌"
+          name="search"
+        />
+        <span class="iconfont icon-saoma"></span>
+      </form>
+      <form class="search-font" action="#">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+      </form>
+    </div>
+  </body>
+  <script>
+    var searchTexts = [
+      "搜索药品、症状、品牌",
+      "益生菌",
+      "甲流",
+      "猫狗用药",
+      "壮阳",
+      "肠胃",
+    ];
+    var currentIndex = 0;
+
+    function setInfiniteSearchText() {
+      var searchInput = document.getElementById("searchInput");
+      searchInput.value = searchTexts[currentIndex];
+      currentIndex = (currentIndex + 1) % searchTexts.length; // 循环到下一个文本
+    }
+
+    
+    setInterval(setInfiniteSearchText, 3000);
+  </script>
+</html>
